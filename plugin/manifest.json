@@ -1,0 +1,22 @@
+{
+  "manifestVersion": 5,
+  "id": "com.sunmax0731.product-image-delivery-checker",
+  "name": "商品画像納品チェッカー",
+  "version": "0.1.0",
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "24.0.0"
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "mainPanel",
+      "label": {
+        "default": "商品画像納品チェッカー"
+      },
+      "mainPath": "index.html"
+    }
+  ]
+}
