@@ -1,0 +1,127 @@
+{
+  "product": "product-image-delivery-checker",
+  "title": "商品画像納品チェッカー",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "fileName",
+    "width",
+    "height",
+    "colorProfile",
+    "exportPreset"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "Photoshop上の商品画像寸法、色空間、書き出し条件の正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "product-image-delivery-checker-happy",
+            "title": "商品画像納品チェッカー happy",
+            "fileName": "product-main.psd",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "product-image-delivery-checker-missing-required",
+            "title": "商品画像納品チェッカー missing-required",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "product-image-delivery-checker-blocked",
+            "title": "商品画像納品チェッカー blocked",
+            "fileName": "product-main.psd",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "product-image-delivery-checker-happy",
+            "title": "商品画像納品チェッカー happy",
+            "fileName": "product-main.psd",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "ready"
+          },
+          {
+            "id": "product-image-delivery-checker-missing-required",
+            "title": "商品画像納品チェッカー missing-required",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "ready"
+          },
+          {
+            "id": "product-image-delivery-checker-blocked",
+            "title": "商品画像納品チェッカー blocked",
+            "fileName": "product-main.psd",
+            "width": 1200,
+            "height": 1200,
+            "colorProfile": "sRGB IEC61966-2.1",
+            "exportPreset": "PNG transparent",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
