@@ -4,13 +4,18 @@
   <meta charset="utf-8">
   <title>商品画像納品チェッカー</title>
   <style>
-    body { margin: 12px; font-family: system-ui, sans-serif; color: #1c2428; }
+    body { margin: 12px; font-family: system-ui, sans-serif; color: #1c2428; background: #f7f8f8; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .badge { padding: 4px 8px; border: 1px solid #8ab5a4; background: #e7f2ed; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 10px 0; }
+    .card { background: white; border: 1px solid #d8dfdf; padding: 8px; }
     button { padding: 8px 10px; }
-    pre { white-space: pre-wrap; background: #f4f6f7; padding: 8px; }
+    pre { white-space: pre-wrap; background: white; border: 1px solid #d8dfdf; padding: 8px; }
   </style>
 </head>
 <body>
-  <h1>商品画像納品チェッカー</h1>
+  <header><h1>商品画像納品チェッカー</h1><span id="badge" class="badge">未検査</span></header>
+  <div id="cards" class="cards"></div>
   <button id="run">サンプル検査</button>
   <pre id="result"></pre>
   <script type="module" src="src/main.js"></script>
