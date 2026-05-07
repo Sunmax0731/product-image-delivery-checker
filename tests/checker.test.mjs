@@ -4,8 +4,9 @@ import { analyzeItems, renderMarkdownReport } from '../src/checker.mjs';
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "photoshop-image-1",
-  "title": "商品画像納品チェッカー サンプル 1",
+  "id": "product-image-delivery-checker-1",
+  "title": "商品画像納品チェッカー サンプル1",
+  "status": "ready",
   "fileName": "product-main.psd",
   "width": 1200,
   "height": 1200,
@@ -18,8 +19,9 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "photoshop-image-missing-required",
+  "id": "product-image-delivery-checker-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "width": 1200,
   "height": 1200,
   "colorProfile": "sRGB IEC61966-2.1",
