@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "product-image-delivery-checker-docs.zip 10133 bytes"
+          "detail": "product-image-delivery-checker-docs.zip exists and exceeds minimum size"
         }
       ]
     },
