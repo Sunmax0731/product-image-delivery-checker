@@ -1,0 +1,17 @@
+{
+  "name": "product-image-delivery-checker",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Photoshop向けに商品画像のサイズ、色、背景、書き出し条件を確認する。",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "npm test"
+  },
+  "keywords": [
+    "photoshop",
+    "uxp",
+    "preflight"
+  ],
+  "license": "MIT"
+}
