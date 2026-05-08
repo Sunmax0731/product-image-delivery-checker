@@ -1,0 +1,32 @@
+{
+  "product": "product-image-delivery-checker",
+  "repository": "Sunmax0731/product-image-delivery-checker",
+  "githubUrl": "https://github.com/Sunmax0731/product-image-delivery-checker",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/product-image-delivery-checker/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "product-image-delivery-checker-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "adobe-host-plugin",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/product-image-delivery-checker",
+    "url": "https://github.com/Sunmax0731/product-image-delivery-checker",
+    "releaseUrl": "https://github.com/Sunmax0731/product-image-delivery-checker/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}
