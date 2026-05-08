@@ -1,0 +1,11 @@
+{
+  "product": "product-image-delivery-checker",
+  "title": "商品画像納品チェッカー",
+  "domain": "AdobePlugin",
+  "ideaNo": 1,
+  "platformType": "adobe-host-plugin",
+  "expectedPublicTarget": "BOOTH / GitHub Release",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
